@@ -6,6 +6,7 @@ import createError from 'http-errors';
 import pingRouter from './routes/ping';
 import proxyPinger from './util/proxyPinger';
 import { TCPConfig } from './const/config';
+import { registerServer } from './util/registerProxy';
 
 const app = express();
 dotenv.config();
@@ -40,3 +41,9 @@ setInterval(async () => {
 app.listen(process.env.PORT, () => {
   log(`server running : http://localhost:${process.env.PORT}`);
 });
+
+try {
+  registerServer();
+} catch (e) {
+  log(`Could not register server! Maybe the server is already registered, or your key is invalid!`);
+}

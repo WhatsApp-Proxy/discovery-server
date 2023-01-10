@@ -5,3 +5,5 @@ export const TCPConfig = {
   timeout: 5000,
   pingInterval: 1000 * 30,
 };
+
+export const DiscoveryServer = 'http://localhost:8080';

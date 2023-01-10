@@ -6,7 +6,6 @@ WhatsApp Proxy Discovery server | Allows WhatsApp Proxies to announce themselfs 
 
 - `/ping` - Returns a 200 OK response, used to check if the server is reachable
 
-
 ## How to run
 
 - Copy `.env.example` to `.env`
