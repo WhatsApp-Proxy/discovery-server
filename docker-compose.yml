@@ -4,5 +4,5 @@ services:
     build: .
     container_name: whatsapp-web-discovery
     restart: always
-    volumes:
-      - ./:/app
+    # volumes:
+    #   - ./:/app
