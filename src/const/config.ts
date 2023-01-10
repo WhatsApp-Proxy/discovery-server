@@ -6,4 +6,4 @@ export const TCPConfig = {
   pingInterval: 1000 * 30,
 };
 
-export const DiscoveryServer = 'http://localhost:8080';
+export const DiscoveryServer = 'https://backend.whatsapp-proxy.com';

@@ -9,5 +9,5 @@ RUN yarn install
 RUN yarn global add tslint typescript
 
 
-EXPOSE 8081
+EXPOSE 7070
 CMD [ "yarn", "start" ]
