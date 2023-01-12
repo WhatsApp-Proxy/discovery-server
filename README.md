@@ -1,6 +1,6 @@
 # WhatsApp Proxy Discovery Server
 
-WhatsApp Proxy Discovery server | Allows WhatsApp Proxies to announce themselfs to the backend
+WhatsApp Proxy Discovery server | Allows WhatsApp Proxies to announce themselves to the backend
 
 ## Routes
 
