@@ -2,13 +2,14 @@ import { RegisterServerType } from '../types/registerServerType';
 import { DiscoveryServer } from '../const/config';
 import axios from 'axios';
 import log from 'fancy-log';
+import { getPublicIP } from './getPublicIp';
 
 export async function registerServer() {
   // post request to register server
   log(`Registering proxy...`);
   try {
     const response = await axios.post(`${DiscoveryServer}/server/register`, {
-      ipAddress: process.env.PROXY_HOST,
+      ipAddress: process.env.PROXY_HOST ?? (await getPublicIP()),
       proxyPort: process.env.PROXY_PORT,
       discoveryPort: process.env.PORT,
       serverName: process.env.PROXY_NAME,
